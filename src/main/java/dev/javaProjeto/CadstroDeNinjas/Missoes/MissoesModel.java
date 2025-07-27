@@ -1,6 +1,7 @@
 package dev.javaProjeto.CadstroDeNinjas.Missoes;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import dev.javaProjeto.CadstroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class MissoesModel {
 
 
         @OneToMany(mappedBy = "missoes")
+        @JsonManagedReference
         private List<NinjaModel> ninja;
 
 
